@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js"defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body onload="typeWriter()">
+    <section id="landing-page">
+    <nav>
+        <div class="row">
+            <div class="nav__container">
+                <h3 class="logo">Dictionary.com</h3>
+                <ul class="nav__link__list">
+                    <li class="nav__link">
+                        <a href=""class="nav__link__anchor contact-btn">Contact</a>
+                    </li>
+                    <li class="nav__link" onclick="toggleContrast()">
+                        <a href="#" class="nav__link__anchor"><i class="fa-regular fa-moon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="row">
+            <div class="container">
+                <div class="landing__container">
+                    <div class="header__title">
+                        <h1 id="title"></h1>
+                        </div>
+                    <div class="search__bar">
+                        <input required type="text" placeholder="Search word..." onkeypress="keyUp(event)">
+                        <div class="seacrch__bar__icon">
+                            <a href="#dictionary__section"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </header>
+</section>
+<section id="dictionary__section">
+<main>
+    <div class="row">
+        <div class="container">
+            <div class="dictionary--list">
+                <div class="dictionary--description">
+                    <div class="loading">
+                        <i class="fa-solid fa-spinner loading-spinner"></i>
+                    </div>
+                    <div class="dictionary__word">
+                        <h2 class="word">word</h3>
+                        <div class="dictionary__word__sound__icon">
+                             <a><i class="fa-solid fa-volume-high"></i></a>
+                        </div>
+                        <p class="word--pronunciation text--grey">[ pronunciation ]</p>
+                    </div>
+                    <hr>
+                    <div class="dictionary__word--definitions">
+                    <p class="dictionary__word--class">verb</p>
+                    <p class="text--grey">Definitions :</p>
+                    <ol class="dictionary__word--definition--list">
+                      <li class="dictionary__definition">meaning1</li> 
+                      <li class="dictionary__definition">meaning2</li> 
+                      <li class="dictionary__definition">meaning3</li> 
+                    </ol>
+                  </div>
+                  <div class="dictionary__word--source">
+                    <p class="text--grey">Source : </p>
+                    <a href="" class="source--link">
+                      link
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</section>
+</body>
+</html>
